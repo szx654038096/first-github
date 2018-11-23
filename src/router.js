@@ -6,6 +6,8 @@ import HomeContainer from './components/tabbar/HomeContainer.vue'
 import MemberContainer from './components/tabbar/MemberContainer.vue'
 import ShopcarContainer from './components/tabbar/ShopcarContainer.vue'
 import SearchContainer from './components/tabbar/SearchContainer.vue'
+import NewsList from './components/news/NewsList.vue'
+import NewsInfo from './components/news/NewsInfo.vue'
 
 // 创建路有对象
 var router = new VueRouter({
@@ -14,7 +16,9 @@ var router = new VueRouter({
     { path: '/Home', component: HomeContainer },
     { path: '/Member', component: MemberContainer },
     { path: '/Shopcar', component: ShopcarContainer },
-    { path: '/Search', component: SearchContainer }
+    { path: '/Search', component: SearchContainer },
+    { path: '/Home/newslist', component: NewsList },
+    { path: '/Home/newsinfo/:id', component: NewsInfo }
   ],
   linkActiveClass: 'mui-active'
 })
